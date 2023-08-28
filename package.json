@@ -1,8 +1,12 @@
 {
   "name": "vite",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
+  "description": "Учебный проект мессенджера в Яндекс Практикуме",
   "type": "module",
+  "engines": {
+    "node": ">=14.17"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -10,5 +14,10 @@
   },
   "devDependencies": {
     "vite": "^4.4.5"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "path": "^0.12.7",
+    "vite-plugin-handlebars": "^1.6.0"
   }
 }
