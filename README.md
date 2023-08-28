@@ -38,7 +38,7 @@ README — первое, что прочитает пользователь, к�
 
 Учебный проект. Суть проекта - реализовать чат 
 
-Дизайн можно найти [Figma](https://www.figma.com/file/Mn2WS288jRACzOkDbNfLHf/%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D1%83%D0%BC?type=design&node-id=0%3A1&mode=design&t=u14E3mQs4DVYRW7P-1)
+Дизайн можно найти в [Figma](https://www.figma.com/file/Mn2WS288jRACzOkDbNfLHf/%D0%9F%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D1%83%D0%BC?type=design&node-id=0%3A1&mode=design&t=u14E3mQs4DVYRW7P-1)
 
 ## Установка
 
