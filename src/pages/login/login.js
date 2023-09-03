@@ -13,9 +13,4 @@ class Login {
   }
 }
 
-var source = document.getElementById("entry-template").innerHTML;
-var template = Handlebars.compile(source);
-var context = { username: "Username" };
-document.getElementById("root").innerHTML = template(context);
-
 const login = new Login();
