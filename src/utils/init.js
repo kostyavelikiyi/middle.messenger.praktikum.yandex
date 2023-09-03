@@ -10,7 +10,7 @@ class Auth {
   }
   logOut() {
     localStorage.removeItem("auth");
-    window.location.replace("./pages/login/login.hbs");
+    window.location.replace("/pages/login/login.html");
   }
 }
 

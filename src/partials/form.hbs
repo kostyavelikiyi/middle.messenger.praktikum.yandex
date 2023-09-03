@@ -1,13 +1,23 @@
-<!-- todo разобраться с форматингом внутри скрипта -->
 <form id="form">
   <div class="container">
-    <label for="uname"><b>{{username}}</b></label>
-    <input type="text" placeholder="Enter Username" name="uname" required />
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required />
-    <button type="submit">Login</button>
-    <div class="href">
-      <a href="../registration/registration.hbs">Sign up</a>
-    </div>
+    {{#each data}}
+        {{#ifeq type 'input'}}
+            <label for={{../label_id}}><b>{{../label_name}}</b></label>
+            <input
+            type="{{../sub_type}}"
+            placeholder="Enter {{../label_name}}"
+            name={{../label_id}}
+            required
+            />
+        {{/ifeq}}
+        {{#ifeq type 'submit'}}
+            <button type="submit">{{../label_name}}</button>
+        {{/ifeq}}
+        {{#ifeq type 'href'}}
+            <div class="href">
+                <a href="{{../link}}">{{../label_name}}</a>
+            </div>
+        {{/ifeq}}
+    {{/each}}
   </div>
 </form>
