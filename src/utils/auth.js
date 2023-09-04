@@ -8,7 +8,7 @@ class Login {
       e.preventDefault();
       console.log("submit");
       localStorage.setItem("auth", 1);
-      window.location.replace("/");
+      window.location.replace("/pages/chat/chat.html");
     });
   }
 }
