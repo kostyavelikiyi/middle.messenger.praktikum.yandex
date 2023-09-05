@@ -126,17 +126,17 @@ export default {
         {
           link: "profile_change_data.html",
           label: "Изменить данные",
-          color: "blue",
+          css_classes: "blue",
         },
         {
           link: "profile_change_password.html",
           label: "Изменить пароль",
-          color: "blue",
+          css_classes: "blue",
         },
         {
           link: "../login/login.html",
           label: "Выйти",
-          color: "red",
+          css_classes: "red logout",
         },
       ],
       pass: [
