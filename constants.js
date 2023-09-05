@@ -143,17 +143,17 @@ export default {
         {
           label: "Старый пароль",
           value: "pochta@yandex.ru",
-          property: "email",
+          id: "oldPassword",
         },
         {
           label: "Новый пароль",
           value: "ivanivanov",
-          property: "login",
+          id: "newPassword",
         },
         {
           label: "Повторите новый пароль",
           value: "Иван",
-          property: "first_name",
+          id: "newPassword_validate",
         },
       ],
     },
