@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- todo move to reussable block -->
+    <meta charset="UTF-8" />
+    <script type="module" src="/utils/init.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--  -->
+    <title>Chats</title>
+    <link rel="stylesheet" href="chat.css" />
+    <link rel="stylesheet" href="../../style.css" />
+   <link rel="stylesheet" href="../../partials/chat_preview/chat_preview.css" />
+  </head>
+  <body>
+    <!-- доделать во второом спринте-->
+    <div class="flex-container">
+        <div class="aside">
+            <div>
+                <div class="profile">
+                    <a href="/pages/profile/profile.html">Профиль</a>
+                </div>
+                <div>
+                    <input type="text" class="search" placeholder="Search"></input>
+                </div>
+                {{> chat_preview message}}
+            </div>
+        </div>
+        <div class="chat_details">
+            <div class="text_stub text_min">Выберите чат чтобы отправить сообщение</div>
+        </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,18 @@
+<ul class="chat">
+  {{#each data}}
+    <li>
+      <div class="chat_preview">
+        <div class="chat_avatar">
+        </div>
+        <div class="chat_body">
+          <div class="chat_header">{{name}}</div>
+          <div class="chat_message text_min">{{message}}</div>
+        </div>
+        <div class="chat_sidebar">
+          <div class="chat_time text_min">{{time}}</div>
+          <div class="chat_status message_counter">{{count}}</div>
+        </div>
+      </div>
+    </li>
+  {{/each}}
+</ul>
