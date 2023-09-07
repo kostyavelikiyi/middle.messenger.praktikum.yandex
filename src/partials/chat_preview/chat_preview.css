@@ -23,7 +23,6 @@ li {
   border-radius: 50%;
   margin: 5px;
 }
-
 .chat_sidebar {
   display: flex;
   flex-direction: column;
