@@ -26,16 +26,16 @@ export default defineConfig({
         profile: resolve(__dirname, "src/pages/profile/profile.html"),
         registration: resolve(
           __dirname,
-          "src/pages/registration/registration.html"
+          "src/pages/registration/registration.html",
         ),
         profile_main: resolve(__dirname, "src/pages/profile/profile.html"),
         profile_change_data: resolve(
           __dirname,
-          "src/pages/profile/profile_change_data.html"
+          "src/pages/profile/profile_change_data.html",
         ),
         profile_change_password: resolve(
           __dirname,
-          "src/pages/profile/profile_change_password.html"
+          "src/pages/profile/profile_change_password.html",
         ),
         500: resolve(__dirname, "src/pages/errors/500.html"),
         404: resolve(__dirname, "src/pages/errors/404.html"),
