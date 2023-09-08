@@ -1,0 +1,46 @@
+.flex-container {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-light-grey);
+  font-size: 12px;
+}
+
+.profile {
+  display: flex;
+  justify-content: flex-end;
+  margin: 10px 5px;
+}
+
+.search {
+  width: 95%;
+  border: none;
+  background: var(--background-component);
+  height: 32px;
+  border-radius: 5px;
+  margin: 5px;
+  text-align: center;
+  font-size: 12px;
+}
+
+.text_stub {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.chat_details {
+  width: 70%;
+}
+
+.aside {
+  width: 30%;
+  min-width: 200px;
+  max-width: 300px;
+  border-right: 1px solid var(--border);
+  background-color: var(--background-color);
+}

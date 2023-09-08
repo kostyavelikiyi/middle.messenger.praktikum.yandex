@@ -1,0 +1,22 @@
+:root {
+  --text-light-grey: #999999;
+  --background-component: #efefef;
+  --border: #eaeaea;
+  --background-color: #fbfbfb;
+  --warning-color: #ff0000;
+  --action-color: #3369f3;
+  --button-text-color: #ffffff;
+}
+
+.text_bold {
+  font-size: 13px;
+}
+
+.text_min {
+  font-size: 12px;
+}
+
+.text_min_light {
+  color: var(--text-light-grey);
+  font-size: 12px;
+}

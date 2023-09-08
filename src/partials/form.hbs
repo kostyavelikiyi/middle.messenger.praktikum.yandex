@@ -1,0 +1,23 @@
+<form id="form">
+  <div class="container">
+    {{#each data}}
+        {{#ifeq type 'input'}}
+            <label for={{../label_id}}><b>{{../label_name}}</b></label>
+            <input
+            type="{{../sub_type}}"
+            placeholder="Enter {{../label_name}}"
+            name={{../label_id}}
+            required
+            />
+        {{/ifeq}}
+        {{#ifeq type 'submit'}}
+            <button type="submit">{{../label_name}}</button>
+        {{/ifeq}}
+        {{#ifeq type 'href'}}
+            <div class="href">
+                <a href="{{../link}}">{{../label_name}}</a>
+            </div>
+        {{/ifeq}}
+    {{/each}}
+  </div>
+</form>

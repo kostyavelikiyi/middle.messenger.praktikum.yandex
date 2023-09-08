@@ -1,0 +1,28 @@
+{
+  "name": "vite",
+  "private": true,
+  "version": "0.0.1",
+  "description": "Учебный проект мессенджера в Яндекс Практикуме",
+  "type": "module",
+  "engines": {
+    "node": ">=14.17"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "start": "vite build & vite"
+  },
+  "devDependencies": {
+    "eslint": "^8.48.0",
+    "postcss": "^8.4.29",
+    "postcss-nested": "^6.0.1",
+    "prettier": "3.0.3",
+    "pretty": "^2.0.0",
+    "vite": "^4.4.5"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "path": "^0.12.7",
+    "vite-plugin-handlebars": "^1.6.0"
+  }
+}
