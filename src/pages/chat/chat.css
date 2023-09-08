@@ -5,7 +5,7 @@
 
 a {
   text-decoration: none;
-  color: #999999;
+  color: var(--text-light-grey);
   font-size: 12px;
 }
 
@@ -18,7 +18,7 @@ a {
 .search {
   width: 95%;
   border: none;
-  background: #efefef;
+  background: var(--background-component);
   height: 32px;
   border-radius: 5px;
   margin: 5px;
@@ -41,6 +41,6 @@ a {
   width: 30%;
   min-width: 200px;
   max-width: 300px;
-  border-right: 1px solid #eaeaea;
-  background-color: #fbfbfb;
+  border-right: 1px solid var(--border);
+  background-color: var(--background-color);
 }

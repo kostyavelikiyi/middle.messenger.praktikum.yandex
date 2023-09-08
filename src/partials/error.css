@@ -5,7 +5,7 @@
 a {
   text-decoration: none;
   font-size: 13px;
-  color: #3369f3;
+  color: var(--action-color);
 }
 
 .center {

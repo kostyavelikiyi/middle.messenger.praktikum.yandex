@@ -1,7 +1,7 @@
 .profile_avatar {
   width: 130px;
   height: 130px;
-  background-color: #efefef;
+  background-color: var(--background-component);
   border-radius: 50%;
   margin: 5px;
 }
@@ -36,7 +36,7 @@ a {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  border-bottom: 1px solid #eaeaea;
+  border-bottom: 1px solid var(--border);
   padding: 10px;
 }
 
@@ -49,18 +49,18 @@ ul {
 }
 
 .red {
-  color: #ff0000;
+  color: var(--warning-color);
 }
 
 .blue {
-  color: #3369f3;
+  color: var(--action-color);
 }
 
 button {
-  background-color: #3369f3;
+  background-color: var(--action-color);
   border-radius: 8px;
   text-decoration: none;
   border: none;
-  color: #ffffff;
+  color: var(--button-text-color);
   padding: 10px 70px;
 }

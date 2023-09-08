@@ -15,7 +15,7 @@ input {
 }
 
 button {
-  background-color: #3369f3;
+  background-color: var(--action-color);
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -29,7 +29,7 @@ a {
   width: 50%;
   margin: auto;
   text-align: center;
-  color: #3369f3;
+  color: var(--action-color);
   text-decoration: none;
 }
 .href {
