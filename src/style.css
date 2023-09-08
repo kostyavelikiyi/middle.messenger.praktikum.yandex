@@ -13,6 +13,10 @@
 }
 
 .text_min {
+  font-size: 12px;
+}
+
+.text_min_light {
   color: var(--text-light-grey);
   font-size: 12px;
 }

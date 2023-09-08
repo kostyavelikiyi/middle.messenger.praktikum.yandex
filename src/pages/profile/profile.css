@@ -64,3 +64,30 @@ button {
   color: var(--button-text-color);
   padding: 10px 70px;
 }
+
+input {
+  outline: none;
+  box-shadow: none;
+  border: 0px;
+}
+
+.inputfile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.inputfile + label {
+  color: var(--button-text-color);
+  background-color: var(--action-color);
+  padding: 4px 8px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.inputfile + label:hover {
+  opacity: 0.8;
+}
