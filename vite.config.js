@@ -8,10 +8,16 @@ export default defineConfig({
     handlebars({
       partialDirectory: resolve(__dirname, "src/partials"),
       context: constants.data,
-      helpers: {
+      _helpers: {
         ifeq: (a, b, options) => {
           return a == b ? options.fn(this) : options.inverse(this);
         },
+      },
+      get helpers() {
+        return this._helpers;
+      },
+      set helpers(value) {
+        this._helpers = value;
       },
     }),
   ],
@@ -40,9 +46,7 @@ export default defineConfig({
         500: resolve(__dirname, "src/pages/errors/500.html"),
         404: resolve(__dirname, "src/pages/errors/404.html"),
       },
-      external: {
-        
-      }
+      external: {},
     },
   },
   server: {
