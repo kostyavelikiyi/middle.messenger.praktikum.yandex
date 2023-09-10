@@ -1,10 +1,10 @@
 class Auth {
   constructor() {
     const auth = localStorage.getItem("auth");
-    this.validateAuth(auth);
+    this.validateAuth(auth!);
   }
-  validateAuth(auth) {
-    if (auth != 1) {
+  validateAuth(auth: string) {
+    if (auth != "1") {
       window.location.replace("/pages/login/login.html");
     }
   }
