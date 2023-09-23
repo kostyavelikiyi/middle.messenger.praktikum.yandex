@@ -74,71 +74,10 @@ export default {
         },
       ],
     },
-    message: {
-      data: [
-        { name: 'Иван', message: 'Привет', time: '10:49', count: '4' },
-        { name: 'Петя', message: 'Хорошо', time: 'Пн', count: '2' },
-        { name: 'Маша', message: 'Как дела?', time: 'Вс', count: '3' },
-        {
-          name: 'Лена',
-          message: 'Что делаешь?',
-          time: '1 мая 2020',
-          count: '',
-        },
-      ],
-    },
+    
     profile: {
-      name: 'Костя',
-      data: [
-        {
-          label: 'Почта',
-          value: 'pochta@yandex.ru',
-          property: 'email',
-        },
-        {
-          label: 'Логин',
-          value: 'ivanivanov',
-          property: 'login',
-        },
-        {
-          label: 'Имя',
-          value: 'Иван',
-          property: 'first_name',
-        },
-        {
-          label: 'Фамилия',
-          value: 'Иванов',
-          property: 'second_name',
-        },
-        {
-          label: 'Имя в чате',
-          value: 'Иван',
-          property: 'display_name',
-        },
-
-        {
-          label: 'Телефон',
-          value: '+7 (909) 967 30 30',
-          property: 'phone',
-        },
-      ],
-      change: [
-        {
-          link: 'profile_change_data.html',
-          label: 'Изменить данные',
-          css_classes: 'blue',
-        },
-        {
-          link: 'profile_change_password.html',
-          label: 'Изменить пароль',
-          css_classes: 'blue',
-        },
-        {
-          link: '../login/login.html',
-          label: 'Выйти',
-          css_classes: 'red logout',
-        },
-      ],
+      
+      
       pass: [
         {
           label: 'Старый пароль',

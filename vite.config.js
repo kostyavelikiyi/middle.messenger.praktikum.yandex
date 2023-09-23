@@ -5,21 +5,21 @@ import constants from "./constants";
 
 export default defineConfig({
   plugins: [
-    handlebars({
-      partialDirectory: resolve(__dirname, "src/partials"),
-      context: constants.data,
-      _helpers: {
-        ifeq: (a, b, options) => {
-          return a == b ? options.fn(this) : options.inverse(this);
-        },
-      },
-      get helpers() {
-        return this._helpers;
-      },
-      set helpers(value) {
-        this._helpers = value;
-      },
-    }),
+    // handlebars({
+    //   partialDirectory: resolve(__dirname, "src/partials"),
+    //   context: constants.data,
+    //   _helpers: {
+    //     ifeq: (a, b, options) => {
+    //       return a == b ? options.fn(this) : options.inverse(this);
+    //     },
+    //   },
+    //   get helpers() {
+    //     return this._helpers;
+    //   },
+    //   set helpers(value) {
+    //     this._helpers = value;
+    //   },
+    // }),
   ],
   root: "src",
   build: {
