@@ -52,20 +52,16 @@ function navigate(page: string) {
 
   // @ts-ignore
   const Component = pages[page];
-  // console.log(Component);
   const component = new Component();
-  console.log(component.getContent());
   app?.replaceChildren(component.getContent()!);
 }
 
 document.addEventListener('DOMContentLoaded', () => navigate('login'));
 
 document.addEventListener('click', (e) => {
-  // console.log('Click', e);
   // @ts-ignore
   const page = e.target.getAttribute('page');
   if (page) {
-    console.log(page);
     navigate(page);
 
     e.preventDefault();
