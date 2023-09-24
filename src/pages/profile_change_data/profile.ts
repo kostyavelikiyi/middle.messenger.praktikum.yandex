@@ -8,7 +8,7 @@ export class ProfileChangeDataPage extends Block {
   protected render(): string {
     return `
             <div class="flex-container_profile">
-                {{{ Avatar}}}
+                {{{ Avatar }}}
                 {{#> ProfileDataContainer (profile_change_mock)}}
                     {{#each data}}
                         {{{ ProfileData label=this.label value=this.value }}}
