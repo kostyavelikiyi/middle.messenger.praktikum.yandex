@@ -27,14 +27,14 @@ export class InputField extends Block {
 
   protected render(): string {
     return `
-            <div class="input {{#if error}}input__error{{/if}}" >
-                <label class="input__container">
+            <div class="input {{#if error}}input-error{{/if}}" >
+                <label class="input-container">
                     {{{ Input
-                        classes="input__element"
+                        classes="input-element"
                         ref="input"
                         onBlur=onBlur
                     }}}
-                    <div class="input__label">{{label}}</div>
+                    <div class="input-label">{{label}}</div>
                 </label>
                 {{{ ErrorLine error=error ref="errorLine"}}}
             </div>

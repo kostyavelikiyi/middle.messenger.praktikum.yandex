@@ -1,2 +1,2 @@
-import './chat_preview.css';
-export { ChatPreview } from './chat_preview';
+import './chat-preview.css';
+export { ChatPreview } from './chat-preview';

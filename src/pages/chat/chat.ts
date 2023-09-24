@@ -7,8 +7,8 @@ export class ChatPage extends Block {
       openChat: (event: { preventDefault: () => void }) => {
         event.preventDefault();
         console.log(this);
-        const chat_details = document.getElementById('chat_details');
-        console.log(chat_details);
+        const chat-details = document.getElementById('chat-details');
+        console.log(chat-details);
       },
     });
   }

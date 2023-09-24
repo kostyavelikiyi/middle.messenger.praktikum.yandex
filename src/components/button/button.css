@@ -9,25 +9,25 @@
   cursor: pointer;
 }
 
-.button__primary {
+.button-primary {
   background-color: var(--action-color);
   color: var(--button-text-color);
   font-size: 13px;
 }
 
-.button__link {
+.button-link {
   color: var(--action-color);
   font-size: 11px;
   text-align: center;
 }
 
-.button__link_grey {
+.button-link-grey {
   color: var(--text-light-grey);
   font-size: 11px;
   text-align: center;
 }
 
-.button__link_red {
+.button-link-red {
   color: var(--warning-color);
   font-size: 11px;
   text-align: center;
@@ -40,8 +40,8 @@
   border-radius: 50%;
 }
 
-.button-arrow__left,
-.button-arrow__right {
+.button-arrow-left,
+.button-arrow-right {
   margin: 0 auto;
   width: 11px;
   height: 1.6px;
@@ -49,10 +49,10 @@
   background-color: var(--button-text-color);
 }
 
-.button-arrow__left::after,
-.button-arrow__left::before,
-.button-arrow__right::after,
-.button-arrow__right::before {
+.button-arrow-left::after,
+.button-arrow-left::before,
+.button-arrow-right::after,
+.button-arrow-right::before {
   content: "";
   background-color: var(--button-text-color);
   display: inline-block;
@@ -61,23 +61,23 @@
   position: absolute;
 }
 
-.button-arrow__right::after {
+.button-arrow-right::after {
   transform: rotate(45deg);
   bottom: 2px;
 }
 
-.button-arrow__right::before {
+.button-arrow-right::before {
   transform: rotate(-45deg);
   top: 2px;
 }
 
-.button-arrow__left::after {
+.button-arrow-left::after {
   transform: rotate(-45deg);
   bottom: 2px;
   left: -1px;
 }
 
-.button-arrow__left::before {
+.button-arrow-left::before {
   transform: rotate(45deg);
   top: 2px;
   left: -1px;

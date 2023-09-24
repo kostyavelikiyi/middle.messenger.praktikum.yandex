@@ -2,28 +2,29 @@
   padding-left: 0;
 }
 
-.chat > li {
-  height: 67px;
-}
-
 li {
   list-style-type: none;
 }
 
-.chat_preview {
+.chat > li {
+  height: 67px;
+}
+
+.chat-preview {
   border-top: 1px solid var(--border);
   display: flex;
   flex-direction: row;
 }
 
-.chat_avatar {
+.chat-avatar {
   width: 47px;
   height: 47px;
   background-color: var(--background-component);
   border-radius: 50%;
   margin: 5px;
 }
-.chat_sidebar {
+
+.chat-sidebar {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -31,12 +32,12 @@ li {
   margin: 5px;
 }
 
-.chat_body {
+.chat-body {
   flex-grow: 1;
   margin: 5px;
 }
 
-.message_counter {
+.message-counter {
   right: -0.7em;
   top: -0.7em;
   min-width: 1.6em;
@@ -44,7 +45,6 @@ li {
   border-radius: 0.8em;
   border: 0.05em solid white;
   background-color: var(--action-color);
-
   display: flex;
   justify-content: center;
   align-items: center;

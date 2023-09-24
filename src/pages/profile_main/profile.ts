@@ -8,7 +8,7 @@ export class ProfilePage extends Block {
   protected render(): string {
     return `
         {{#with (profile_main_mock)}}
-            <div class="flex-container_profile">
+            <div class="flex-container-profile">
             {{{ Avatar }}}
             <div>{{name}}</div>
             {{#> ProfileDataContainer}}

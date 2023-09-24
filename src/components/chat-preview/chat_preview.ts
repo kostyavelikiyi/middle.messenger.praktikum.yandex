@@ -21,16 +21,16 @@ export class ChatPreview extends Block {
     const { name, message, time, count } = this.props;
     return `
                 <li>
-                <div class="chat_preview">
-                    <div class="chat_avatar">
+                <div class="chat-preview">
+                    <div class="chat-avatar">
                     </div>
-                    <div class="chat_body">
-                    <div class="chat_header">${name}</div>
-                    <div class="chat_message text_min_light">${message}</div>
+                    <div class="chat-body">
+                    <div class="chat-header">${name}</div>
+                    <div class="chat_message text-min-light">${message}</div>
                     </div>
-                    <div class="chat_sidebar">
-                    <div class="chat_time text_min_light">${time}</div>
-                    <div class="chat_status message_counter">${count}</div>
+                    <div class="chat-sidebar">
+                    <div class="chat_time text-min-light">${time}</div>
+                    <div class="chat_status message-counter">${count}</div>
                     </div>
                 </div>
                 </li>

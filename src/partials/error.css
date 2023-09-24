@@ -1,4 +1,4 @@
-.text_error {
+.text-error {
   font-size: 30px;
 }
 
@@ -16,7 +16,7 @@ a {
   transform: translate(-50%, -50%);
 }
 
-.error_container {
+.error-container {
   display: block;
   justify-content: center;
   align-items: center;

@@ -17,9 +17,9 @@ export class ProfileData extends Block {
     const { label, value } = this.props;
     return `
             <li>
-              <div class="profile_row">
+              <div class="profile-row">
                 <div>${label} </div>
-                <div class="text_min_light">${value}</div>
+                <div class="text-min-light">${value}</div>
               </div>
             </li>
         `;

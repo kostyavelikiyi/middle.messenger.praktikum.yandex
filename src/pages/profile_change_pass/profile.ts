@@ -7,7 +7,7 @@ export class ProfileChangePassPage extends Block {
 
   protected render(): string {
     return `
-        <div class="flex-container_profile">
+        <div class="flex-container-profile">
             {{{ Avatar }}}
             {{#> ProfileDataContainer (profile_change_pass_mock)}}
                 {{#each data}}

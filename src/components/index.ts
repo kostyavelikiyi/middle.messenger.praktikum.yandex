@@ -6,5 +6,5 @@ export { FormAuth } from './form-auth';
 export { ChatPreview } from './chat-preview';
 export { ChatDetails } from './chat-details';
 export { Avatar } from './avatar';
-export { ProfileData } from './profile_data';
+export { ProfileData } from './profile-data';
 export { ProfileDataContainer } from './profile-data-container';

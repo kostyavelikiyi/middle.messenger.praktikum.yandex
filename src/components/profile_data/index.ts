@@ -1,2 +1,2 @@
-import './profile_row.css';
-export { ProfileData } from './profile_data';
+import './profile-row.css';
+export { ProfileData } from './profile-data';

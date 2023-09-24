@@ -1,7 +1,7 @@
-.profile_data {
+.profile-data {
   display: flex;
 }
 
-.profile_container > div {
+.profile-container > div {
   width: 400px;
 }
