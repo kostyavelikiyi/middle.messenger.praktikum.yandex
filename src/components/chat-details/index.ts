@@ -1,2 +1,2 @@
-import './chat-details.css';
-export { ChatDetails } from './chat-details';
+import './chat_details.css';
+export { ChatDetails } from './chat_details';
