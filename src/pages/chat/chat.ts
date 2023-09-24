@@ -34,8 +34,7 @@ export class ChatPage extends Block {
                 {{/each}}
             </div>
         </div>
-        {{#> ChatDetails }}
-        {{/ChatDetails}}
+        {{{ ChatDetails }}}
     </div>
         `;
   }

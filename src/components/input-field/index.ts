@@ -1,2 +1,2 @@
-import './input-field.css'
+import './input-field.css';
 export { InputField } from './input-field';

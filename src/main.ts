@@ -32,7 +32,6 @@ Handlebars.registerPartial(
   'ProfileDataContainer',
   Components.ProfileDataContainer,
 );
-Handlebars.registerPartial('ChatDetails', Components.ChatDetails);
 
 registerComponent('Button', Components.Button);
 registerComponent('InputField', Components.InputField);
@@ -41,7 +40,7 @@ registerComponent('ErrorLine', Components.ErrorLine);
 registerComponent('Avatar', Components.Avatar);
 registerComponent('ProfileData', Components.ProfileData);
 registerComponent('ChatPreview', Components.ChatPreview);
-// registerComponent('ChatDetails', Components.ChatDetails);
+registerComponent('ChatDetails', Components.ChatDetails);
 
 function navigate(page: string) {
   const app = document.getElementById('app');
