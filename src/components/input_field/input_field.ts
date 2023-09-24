@@ -1,9 +1,10 @@
+/* eslint-disable @typescript-eslint/no-non-null-assertion */
 /* eslint-disable @typescript-eslint/strict-boolean-expressions */
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
 import Block from '../../core/Block';
 
 export class InputField extends Block {
-  constructor(props) {
+  constructor(props: any) {
     super({
       ...props,
       onBlur: () => this.validate(),
@@ -14,11 +15,11 @@ export class InputField extends Block {
     if (!this.validate()) {
       return false;
     }
-    return this.refs.input._element.value;
+    return this.refs.input!.element!.value;
   }
 
   private validate() {
-    const value = this.refs.input._element.value;
+    const value = this.refs.input!.element!.value;
     const error = this.props.validate?.(value);
     if (error) {
       this.refs.errorLine.setProps({ error });
