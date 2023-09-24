@@ -28,11 +28,11 @@ const pages = {
 // });
 
 Handlebars.registerPartial('FormAuth', Components.FormAuth);
-Handlebars.registerPartial('ChatPreview', Components.ChatPreview);
 Handlebars.registerPartial(
   'ProfileDataContainer',
   Components.ProfileDataContainer,
 );
+Handlebars.registerPartial('ChatDetails', Components.ChatDetails);
 
 registerComponent('Button', Components.Button);
 registerComponent('InputField', Components.InputField);
@@ -40,6 +40,8 @@ registerComponent('Input', Components.Input);
 registerComponent('ErrorLine', Components.ErrorLine);
 registerComponent('Avatar', Components.Avatar);
 registerComponent('ProfileData', Components.ProfileData);
+registerComponent('ChatPreview', Components.ChatPreview);
+// registerComponent('ChatDetails', Components.ChatDetails);
 
 function navigate(page: string) {
   const app = document.getElementById('app');

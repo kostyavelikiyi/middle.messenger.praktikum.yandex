@@ -2,7 +2,15 @@ import Block from '../../core/Block';
 
 export class ChatPage extends Block {
   constructor() {
-    super({});
+    super({
+      // TODO доделать интерактивное открытие
+      openChat: (event: { preventDefault: () => void }) => {
+        event.preventDefault();
+        console.log(this);
+        const chat_details = document.getElementById('chat_details');
+        console.log(chat_details);
+      },
+    });
   }
 
   protected render(): string {
@@ -21,12 +29,13 @@ export class ChatPage extends Block {
                 <div>
                     <input type="text" class="search" placeholder="Search"></input>
                 </div>
-                     {{> ChatPreview}}
+                {{#each (message_preview_mock)}}
+                     {{{ ChatPreview name=this.name message=this.message time=this.time count=this.count onClick=@root.openChat }}}
+                {{/each}}
             </div>
         </div>
-        <div class="chat_details">
-            <div class="text_stub text_min_light">Выберите чат чтобы отправить сообщение</div>
-        </div>
+        {{#> ChatDetails }}
+        {{/ChatDetails}}
     </div>
         `;
   }

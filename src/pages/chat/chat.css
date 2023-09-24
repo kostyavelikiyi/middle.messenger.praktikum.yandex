@@ -1,6 +1,7 @@
 .flex-container {
   display: flex;
   flex-flow: row nowrap;
+  height: 100%;
 }
 
 a {
@@ -24,17 +25,6 @@ a {
   margin: 5px;
   text-align: center;
   font-size: 12px;
-}
-
-.text_stub {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-}
-
-.chat_details {
-  width: 70%;
 }
 
 .aside {

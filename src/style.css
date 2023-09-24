@@ -1,3 +1,15 @@
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+#app {
+  height: 100%;
+}
+
 :root {
   --text-light-grey: #999999;
   --background-component: #efefef;
@@ -7,7 +19,10 @@
   --action-color: #3369f3;
   --button-text-color: #ffffff;
   --text-color: #1e1e1e;
+  --message-other: #f8f8f8;
+  --message-my: #E4EDFD;
 }
+
 
 .text_bold {
   font-size: 13px;
