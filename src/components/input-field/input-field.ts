@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/strict-boolean-expressions */
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
 import Block from '../../core/Block';
 
 export class InputField extends Block {
@@ -7,6 +9,7 @@ export class InputField extends Block {
       onBlur: () => this.validate(),
     });
   }
+
   public value() {
     if (!this.validate()) {
       return false;
