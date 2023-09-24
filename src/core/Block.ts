@@ -25,7 +25,6 @@ class Block {
   public children: Record<string, Block>;
   private eventBus: () => EventBus;
   private _element: HTMLElement | null = null;
-  private _meta: { props: any };
 
   /** JSDoc
    * @param {string} tagName
@@ -37,10 +36,6 @@ class Block {
     const eventBus = new EventBus();
 
     const { props, children } = this._getChildrenAndProps(propsWithChildren);
-
-    this._meta = {
-      props,
-    };
 
     this.children = children;
     this.props = this._makePropsProxy(props);
@@ -112,7 +107,7 @@ class Block {
     }
   }
 
-  protected componentDidUpdate(oldProps: any, newProps: any) {
+  protected componentDidUpdate(_oldProps: any, _newProps: any) {
     return true;
   }
 

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/consistent-type-assertions */
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 /* eslint-disable @typescript-eslint/strict-boolean-expressions */
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
@@ -15,11 +16,11 @@ export class InputField extends Block {
     if (!this.validate()) {
       return false;
     }
-    return this.refs.input!.element!.value;
+    return (<HTMLInputElement>this.refs.input!.element!).value;
   }
 
   private validate() {
-    const value = this.refs.input!.element!.value;
+    const value = (<HTMLInputElement>this.refs.input!.element!).value;
     const error = this.props.validate?.(value);
     if (error) {
       this.refs.errorLine.setProps({ error });
