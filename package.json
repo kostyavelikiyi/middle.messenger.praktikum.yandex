@@ -34,6 +34,7 @@
   "dependencies": {
     "express": "^4.18.2",
     "path": "^0.12.7",
+    "stylelint-config-standard": "^34.0.0",
     "vite-plugin-handlebars": "^1.6.0"
   }
 }
