@@ -38,13 +38,13 @@ export class RegistrationPage extends Block {
     return `
             <div class="container">
                 {{#> FormAuth}}
-                    {{{ InputField label="Почта" ref="email" validate=validate.email }}}
-                    {{{ InputField label="Логин" ref="login" validate=validate.login }}}
-                    {{{ InputField label="Имя" ref="first_name" validate=validate.name }}}
-                    {{{ InputField label="Фамилия" ref="last_name" validate=validate.name }}}
-                    {{{ InputField label="Телфон" ref="phone" validate=validate.phone }}}
-                    {{{ InputField label="Пароль" ref="password" validate=validate.password }}}
-                    {{{ InputField label="Пароль (еще раз)" ref="password2" validate=validate.password }}}
+                    {{{ InputField label="Почта" ref="email" name="email" validate=validate.email }}}
+                    {{{ InputField label="Логин" ref="login" name="login" validate=validate.login }}}
+                    {{{ InputField label="Имя" ref="first_name" name="first_name" validate=validate.name }}}
+                    {{{ InputField label="Фамилия" ref="last_name" name="second_name" validate=validate.name }}}
+                    {{{ InputField label="Телфон" ref="phone" name="phone" validate=validate.phone }}}
+                    {{{ InputField label="Пароль" ref="password" name="password" validate=validate.password }}}
+                    {{{ InputField label="Пароль (еще раз)" ref="password2" name="password2" validate=validate.password }}}
                     {{{ Button label="Зарегистрироваться" type="primary" page="chat" onClick=onSignUp }}}
                     {{{ Button label="Войти" type="link" page="login"}}}
                 {{/FormAuth}}
