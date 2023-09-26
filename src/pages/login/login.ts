@@ -1,25 +1,12 @@
 import Block from '../../core/Block';
+import validateUtils from '../../utils/validate';
 
 export class LoginPage extends Block {
   constructor() {
     super({
       validate: {
-        login: (value: string) => {
-          let error = '';
-          if (!/^(?=.*[A-Za-z])[A-Za-z0-9_-]{3,20}$/.test(value)) {
-            error =
-              'от 3 до 20 символов, латиница, может содержать цифры, но не состоять из них, без пробелов, без спецсимволов (допустимы дефис и нижнее подчёркивание)';
-          }
-          return error;
-        },
-        password: (value: string) => {
-          let error = '';
-          if (!/^(?=.*?[A-Z])(?=.*?[0-9]).{8,40}$/.test(value)) {
-            error =
-              'от 8 до 40 символов, обязательно хотя бы одна заглавная буква и цифра';
-          }
-          return error;
-        },
+        login: validateUtils.login,
+        password: validateUtils.password,
       },
       onLogin: (event: { preventDefault: () => void }) => {
         event.preventDefault();

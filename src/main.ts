@@ -58,7 +58,9 @@ function navigate(page: string) {
   app?.replaceChildren(component.getContent()!);
 }
 
-document.addEventListener('DOMContentLoaded', () => navigate('login'));
+document.addEventListener('DOMContentLoaded', () =>
+  navigate('login'),
+);
 
 document.addEventListener('click', (e) => {
   // @ts-ignore

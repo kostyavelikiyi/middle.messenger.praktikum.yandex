@@ -10,7 +10,9 @@ export class Avatar extends Block {
 
   protected render(): string {
     return `
+          <div class="center">
             <div class="profile-avatar"></div>
+          </div>
         `;
   }
 }
