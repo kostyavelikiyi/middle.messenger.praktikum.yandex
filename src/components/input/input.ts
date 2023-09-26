@@ -5,6 +5,7 @@ interface IProps {
   onBlur: () => void;
   classes: string;
   placeholder: string;
+  name: string;
 }
 
 export class Input extends Block {
@@ -18,12 +19,13 @@ export class Input extends Block {
   }
 
   protected render(): string {
-    const { classes, placeholder } = this.props;
+    const { classes, placeholder, name } = this.props;
     return `
             <input
                 class="${classes}"
                 placeholder="${placeholder || ''}"
                 ref="input"
+                name="${name}"
             />
         `;
   }

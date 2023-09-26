@@ -7,6 +7,19 @@ export class ProfileChangePassPage extends Block {
       validate: {
         password: validateUtils.password,
       },
+      onSave: (event: { preventDefault: () => void }) => {
+        event.preventDefault();
+        console.log(this.refs);
+        const oldPassword = this.refs.oldPassword.value();
+        const newPassword = this.refs.newPassword.value();
+        const newPassword2 = this.refs.newPassword2.value();
+
+        console.log({
+          oldPassword,
+          newPassword,
+          newPassword2,
+        });
+      },
     });
   }
 
@@ -15,9 +28,10 @@ export class ProfileChangePassPage extends Block {
         <div class="container">
             {{#> FormAuth}}
             {{{ Avatar }}}
-            {{{ InputField label="Пароль" ref="password" validate=validate.password }}}
-            {{{ InputField label="Пароль (еще раз)" ref="password2" validate=validate.password }}}
-            {{{ Button label="Сохранить" type="primary" page="profile"}}}
+            {{{ InputField label="Старый пароль" ref="oldPassword" name="oldPassword" validate=validate.password }}}
+            {{{ InputField label="Новый пароль" ref="newPassword" name="newPassword" validate=validate.password }}}
+            {{{ InputField label="Новый пароль (еще раз)" ref="newPassword2" name="newPassword2" validate=validate.password }}}
+            {{{ Button label="Сохранить" type="primary" page="profile" onClick=onSave}}}
             {{/FormAuth}}
         </div>
         `;

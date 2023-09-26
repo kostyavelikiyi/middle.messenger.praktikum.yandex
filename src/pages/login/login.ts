@@ -25,8 +25,8 @@ export class LoginPage extends Block {
     return `
             <div class="container">
                 {{#> FormAuth}}
-                    {{{ InputField label="Логин" ref="login" validate=validate.login }}}
-                    {{{ InputField label="Пароль" ref="password" validate=validate.password }}}
+                    {{{ InputField label="Логин" ref="login" name="login" validate=validate.login }}}
+                    {{{ InputField label="Пароль" ref="password" name="password" validate=validate.password }}}
                     {{{ Button label="Войти" type="primary" page="chat" onClick=onLogin }}}
                     {{{ Button label="Регистрация" type="link" page="registration"}}}
                 {{/FormAuth}}

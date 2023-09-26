@@ -31,6 +31,7 @@ export class InputField extends Block {
   }
 
   protected render(): string {
+    const name = this.props.name;
     return `
             <div class="input {{#if error}}input-error{{/if}}" >
                 <label class="input-container">
@@ -38,6 +39,7 @@ export class InputField extends Block {
                         classes="input-element"
                         ref="input"
                         onBlur=onBlur
+                        name="${name}"
                     }}}
                     <div class="input-label">{{label}}</div>
                 </label>
