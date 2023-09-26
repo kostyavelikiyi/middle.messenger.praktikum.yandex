@@ -16,6 +16,7 @@ const pages = {
   profile: Pages.ProfilePage,
   profile_change_data: Pages.ProfileChangeDataPage,
   profile_change_pass: Pages.ProfileChangePassPage,
+  registration: Pages.RegistrationPage,
 };
 
 // Object.entries(Components).forEach(([ name, component ]) => {

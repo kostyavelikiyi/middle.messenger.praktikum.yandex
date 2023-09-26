@@ -1,6 +1,6 @@
 import Block from '../../core/Block';
 
-export class LoginPage extends Block {
+export class RegistrationPage extends Block {
   constructor() {
     super({
       validate: {
@@ -39,9 +39,9 @@ export class LoginPage extends Block {
             <div class="container">
                 {{#> FormAuth}}
                     {{{ InputField label="Login" ref="login" validate=validate.login }}}
-                    {{{ InputField label="Password" ref="password" validate=validate.password }}}
-                    {{{ Button label="Sign in" type="primary" page="chat" onClick=onLogin }}}
-                    {{{ Button label="Sign up" type="link" page="registration"}}}
+                    {{{ InputField label="Ahaha" ref="password" validate=validate.password }}}
+                    {{{ Button label="Sign up" type="primary" page="chat" onClick=onLogin }}}
+                    {{{ Button label="Sign in" type="link" page="login"}}}
                 {{/FormAuth}}
             </div>
         `;
