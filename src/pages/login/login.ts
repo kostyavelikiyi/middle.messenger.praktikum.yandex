@@ -3,12 +3,24 @@ import Block from '../../core/Block';
 export class LoginPage extends Block {
   constructor() {
     super({
-      // validate: {
-      //   login: (value: string) =>
-      //     value.length < 3 && value.length !== 0
-      //       ? `Length of login should not be less 3 letters.`
-      //       : '',
-      // },
+      validate: {
+        login: (value: string) => {
+          let error = '';
+          if (!/^(?=.*[A-Za-z])[A-Za-z0-9_-]{3,20}$/.test(value)) {
+            error =
+              'от 3 до 20 символов, латиница, может содержать цифры, но не состоять из них, без пробелов, без спецсимволов (допустимы дефис и нижнее подчёркивание)';
+          }
+          return error;
+        },
+        password: (value: string) => {
+          let error = '';
+          if (!/^(?=.*?[A-Z])(?=.*?[0-9]).{8,40}$/.test(value)) {
+            error =
+              'от 3 до 20 символов, латиница, может содержать цифры, но не состоять из них, без пробелов, без спецсимволов (допустимы дефис и нижнее подчёркивание)';
+          }
+          return error;
+        },
+      },
       onLogin: (event: { preventDefault: () => void }) => {
         event.preventDefault();
         const login = this.refs.login.value();
@@ -27,7 +39,7 @@ export class LoginPage extends Block {
             <div class="container">
                 {{#> FormAuth}}
                     {{{ InputField label="Login" ref="login" validate=validate.login }}}
-                    {{{ InputField label="Password" ref="password" }}}
+                    {{{ InputField label="Password" ref="password" validate=validate.password }}}
                     {{{ Button label="Sign in" type="primary" page="chat" onClick=onLogin }}}
                     {{{ Button label="Sign up" type="link" }}}
                 {{/FormAuth}}
