@@ -21,14 +21,24 @@ export class RegistrationPage extends Block {
           return error;
         },
       },
-      onLogin: (event: { preventDefault: () => void }) => {
+      onSignUp: (event: { preventDefault: () => void }) => {
         event.preventDefault();
+        const email = this.refs.email.value();
         const login = this.refs.login.value();
+        const name = this.refs.name.value();
+        const lastName = this.refs.lastName.value();
+        const phone = this.refs.phone.value();
         const password = this.refs.password.value();
+        const password2 = this.refs.password2.value();
 
         console.log({
+          email,
           login,
+          name,
+          lastName,
+          phone,
           password,
+          password2,
         });
       },
     });
@@ -38,10 +48,15 @@ export class RegistrationPage extends Block {
     return `
             <div class="container">
                 {{#> FormAuth}}
-                    {{{ InputField label="Login" ref="login" validate=validate.login }}}
-                    {{{ InputField label="Ahaha" ref="password" validate=validate.password }}}
-                    {{{ Button label="Sign up" type="primary" page="chat" onClick=onLogin }}}
-                    {{{ Button label="Sign in" type="link" page="login"}}}
+                    {{{ InputField label="Почта" ref="email" validate=validate.email }}}
+                    {{{ InputField label="Логин" ref="login" validate=validate.login }}}
+                    {{{ InputField label="Имя" ref="name" validate=validate.name }}}
+                    {{{ InputField label="Фамилия" ref="lastName" validate=validate.lastName }}}
+                    {{{ InputField label="Телфон" ref="phone" validate=validate.phone }}}
+                    {{{ InputField label="Пароль" ref="password" validate=validate.password }}}
+                    {{{ InputField label="Пароль (еще раз)" ref="password2" validate=validate.password }}}
+                    {{{ Button label="Зарегистрироваться" type="primary" page="chat" onClick=onSignUp }}}
+                    {{{ Button label="Войти" type="link" page="login"}}}
                 {{/FormAuth}}
             </div>
         `;
