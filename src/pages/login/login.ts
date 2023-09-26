@@ -38,10 +38,10 @@ export class LoginPage extends Block {
     return `
             <div class="container">
                 {{#> FormAuth}}
-                    {{{ InputField label="Login" ref="login" validate=validate.login }}}
-                    {{{ InputField label="Password" ref="password" validate=validate.password }}}
-                    {{{ Button label="Sign in" type="primary" page="chat" onClick=onLogin }}}
-                    {{{ Button label="Sign up" type="link" page="registration"}}}
+                    {{{ InputField label="Логин" ref="login" validate=validate.login }}}
+                    {{{ InputField label="Пароль" ref="password" validate=validate.password }}}
+                    {{{ Button label="Войти" type="primary" page="chat" onClick=onLogin }}}
+                    {{{ Button label="Регистрация" type="link" page="registration"}}}
                 {{/FormAuth}}
             </div>
         `;
