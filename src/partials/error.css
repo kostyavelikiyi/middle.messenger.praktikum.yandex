@@ -1,11 +1,11 @@
-.text_error {
+.text-error {
   font-size: 30px;
 }
 
 a {
   text-decoration: none;
   font-size: 13px;
-  color: #3369f3;
+  color: var(--action-color);
 }
 
 .center {
@@ -16,7 +16,7 @@ a {
   transform: translate(-50%, -50%);
 }
 
-.error_container {
+.error-container {
   display: block;
   justify-content: center;
   align-items: center;

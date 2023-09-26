@@ -1,24 +1,25 @@
 .flex-container {
   display: flex;
   flex-flow: row nowrap;
+  height: 100%;
 }
 
 a {
   text-decoration: none;
-  color: #999999;
+  color: var(--text-light-grey);
   font-size: 12px;
 }
 
 .profile {
   display: flex;
-  justify-content: flex-end;
-  margin: 10px 5px;
+  justify-content: space-between;
+  margin: 0 5px;
 }
 
 .search {
   width: 95%;
   border: none;
-  background: #efefef;
+  background: var(--background-component);
   height: 32px;
   border-radius: 5px;
   margin: 5px;
@@ -26,22 +27,10 @@ a {
   font-size: 12px;
 }
 
-.text_stub {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-}
-
-.chat_details {
-  width: 70%;
-}
-
 .aside {
   width: 30%;
   min-width: 200px;
   max-width: 300px;
-  border-right: 1px solid #eaeaea;
-  background-color: #fbfbfb;
+  border-right: 1px solid var(--border);
+  background-color: var(--background-color);
 }
-

@@ -1,0 +1,7 @@
+.profile-data {
+  display: flex;
+}
+
+.profile-container > div {
+  width: 400px;
+}
