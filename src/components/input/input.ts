@@ -6,9 +6,12 @@ interface InputProps {
   classes: string;
   placeholder: string;
   name: string;
+  events: {
+    blur: () => void;
+  };
 }
 
-export class Input extends Block {
+export class Input extends Block<InputProps> {
   constructor(props: InputProps) {
     super({
       ...props,

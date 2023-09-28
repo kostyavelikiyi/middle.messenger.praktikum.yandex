@@ -7,9 +7,12 @@ interface ChatPreviewProps {
   time: string;
   count: number;
   onClick: () => void;
+  events: {
+    click: () => void;
+  };
 }
 
-export class ChatPreview extends Block {
+export class ChatPreview extends Block<ChatPreviewProps> {
   constructor(props: ChatPreviewProps) {
     super(props);
     this.props.events = {

@@ -8,7 +8,7 @@ interface ProfileDataProps {
   value: string;
 }
 
-export class ProfileData extends Block {
+export class ProfileData extends Block<ProfileDataProps> {
   constructor(props: ProfileDataProps) {
     super(props);
   }
