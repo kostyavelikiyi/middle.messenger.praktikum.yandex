@@ -3,13 +3,13 @@
 /* eslint-disable @typescript-eslint/strict-boolean-expressions */
 import Block from '../../core/Block';
 
-interface IProps {
+interface ProfileDataProps {
   label: string;
   value: string;
 }
 
 export class ProfileData extends Block {
-  constructor(props: IProps) {
+  constructor(props: ProfileDataProps) {
     super(props);
   }
 
