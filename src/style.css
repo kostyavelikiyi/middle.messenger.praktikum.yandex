@@ -1,0 +1,33 @@
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+#app {
+  height: 100%;
+}
+
+:root {
+  --text-light-grey: #999;
+  --background-component: #efefef;
+  --border: #eaeaea;
+  --background-color: #fbfbfb;
+  --warning-color: #f00;
+  --action-color: #3369f3;
+  --button-text-color: #fff;
+  --text-color: #1e1e1e;
+  --message-other: #f8f8f8;
+  --message-my: #e4edfd;
+}
+
+.text-min {
+  font-size: 12px;
+}
+
+.text-min-light {
+  color: var(--text-light-grey);
+  font-size: 12px;
+}

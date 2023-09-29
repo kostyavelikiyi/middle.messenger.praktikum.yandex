@@ -1,0 +1,24 @@
+.text-error {
+  font-size: 30px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 13px;
+  color: var(--action-color);
+}
+
+.center {
+  width: 400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.error-container {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
