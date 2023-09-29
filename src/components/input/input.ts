@@ -1,15 +1,18 @@
 /* eslint-disable @typescript-eslint/strict-boolean-expressions */
 import Block from '../../core/Block';
 
-interface IProps {
+interface InputProps {
   onBlur: () => void;
   classes: string;
   placeholder: string;
   name: string;
+  events: {
+    blur: () => void;
+  };
 }
 
-export class Input extends Block {
-  constructor(props: IProps) {
+export class Input extends Block<InputProps> {
+  constructor(props: InputProps) {
     super({
       ...props,
       events: {

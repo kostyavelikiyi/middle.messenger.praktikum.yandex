@@ -5,7 +5,7 @@ import Block from '../../core/Block';
 
 export class Avatar extends Block {
   constructor() {
-    super();
+    super({});
   }
 
   protected render(): string {

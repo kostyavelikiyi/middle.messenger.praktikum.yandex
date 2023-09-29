@@ -1,6 +1,6 @@
 import Handlebars from 'handlebars';
 import './profile.css';
-export { ProfileChangeDataPage as default } from './profile';
+export { ProfileChangeDataPage } from './profile';
 
 Handlebars.registerHelper('profile_change_mock', () => {
   return {

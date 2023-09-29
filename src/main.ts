@@ -34,6 +34,11 @@ Handlebars.registerPartial(
   Components.ProfileDataContainer,
 );
 
+// Object.values(Components).forEach((Component) => {
+//   console.log(Component, Component({}).componentName);
+//   // registerComponent(Component, new Component({}).componentName);
+// });
+
 registerComponent('Button', Components.Button);
 registerComponent('InputField', Components.InputField);
 registerComponent('Input', Components.Input);
@@ -52,9 +57,7 @@ function navigate(page: string) {
   app?.replaceChildren(component.getContent()!);
 }
 
-document.addEventListener('DOMContentLoaded', () =>
-  navigate('login'),
-);
+document.addEventListener('DOMContentLoaded', () => navigate('login'));
 
 document.addEventListener('click', (e) => {
   // @ts-ignore

@@ -9,7 +9,7 @@ export class RegistrationPage extends Block {
         name: validateUtils.name,
         login: validateUtils.login,
         phone: validateUtils.phone,
-        password: validateUtils.password
+        password: validateUtils.password,
       },
       onSignUp: (event: { preventDefault: () => void }) => {
         event.preventDefault();

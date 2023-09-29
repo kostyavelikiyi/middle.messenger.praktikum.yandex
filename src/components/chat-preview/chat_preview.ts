@@ -1,16 +1,19 @@
 /* eslint-disable @typescript-eslint/strict-boolean-expressions */
 import Block from '../../core/Block';
 
-interface IProps {
+interface ChatPreviewProps {
   name: string;
   message: string;
   time: string;
   count: number;
   onClick: () => void;
+  events: {
+    click: () => void;
+  };
 }
 
-export class ChatPreview extends Block {
-  constructor(props: IProps) {
+export class ChatPreview extends Block<ChatPreviewProps> {
+  constructor(props: ChatPreviewProps) {
     super(props);
     this.props.events = {
       click: this.props.onClick || (() => {}),

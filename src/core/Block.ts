@@ -10,7 +10,7 @@ import { nanoid } from 'nanoid';
 import Handlebars from 'handlebars';
 
 // Нельзя создавать экземпляр данного класса
-class Block {
+class Block<Props extends Record<string, any> = any> {
   [x: string]: any;
   static EVENTS = {
     INIT: 'init',
@@ -20,7 +20,7 @@ class Block {
   };
 
   public id = nanoid(6);
-  protected props: any;
+  protected props: Props;
   protected refs: Record<string, Block> = {};
   public children: Record<string, Block>;
   private eventBus: () => EventBus;
@@ -32,7 +32,7 @@ class Block {
    *
    * @returns {void}
    */
-  constructor(propsWithChildren: any = {}) {
+  constructor(propsWithChildren: Props) {
     const eventBus = new EventBus();
 
     const { props, children } = this._getChildrenAndProps(propsWithChildren);
@@ -47,8 +47,8 @@ class Block {
     eventBus.emit(Block.EVENTS.INIT);
   }
 
-  _getChildrenAndProps(childrenAndProps: any) {
-    const props: Record<string, any> = {};
+  _getChildrenAndProps(childrenAndProps: Props) {
+    const props: Record<string, Props> = {};
     const children: Record<string, Block> = {};
 
     Object.entries(childrenAndProps).forEach(([key, value]) => {
@@ -59,11 +59,21 @@ class Block {
       }
     });
 
-    return { props, children };
+    return { props: props as Props, children };
+  }
+
+  _removeEvents() {
+    const { events = {} } = this.props as Props & {
+      events: Record<string, () => void>;
+    };
+
+    Object.keys(events).forEach((eventName) => {
+      this._element?.removeEventListener(eventName, events[eventName]);
+    });
   }
 
   _addEvents() {
-    const { events = {} } = this.props as {
+    const { events = {} } = this.props as Props & {
       events: Record<string, () => void>;
     };
 
@@ -101,17 +111,17 @@ class Block {
     );
   }
 
-  private _componentDidUpdate(oldProps: any, newProps: any) {
+  private _componentDidUpdate(oldProps: Props, newProps: Props) {
     if (this.componentDidUpdate(oldProps, newProps)) {
       this.eventBus().emit(Block.EVENTS.FLOW_RENDER);
     }
   }
 
-  protected componentDidUpdate(_oldProps: any, _newProps: any) {
+  protected componentDidUpdate(_oldProps: Props, _newProps: Props) {
     return true;
   }
 
-  setProps = (nextProps: any) => {
+  setProps = (nextProps: Props) => {
     if (!nextProps) {
       return;
     }
@@ -133,6 +143,8 @@ class Block {
     }
 
     this._element = newElement;
+
+    this._removeEvents();
 
     this._addEvents();
   }

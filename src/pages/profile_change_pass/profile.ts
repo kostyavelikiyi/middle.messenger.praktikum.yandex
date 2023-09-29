@@ -1,6 +1,8 @@
 import Block from '../../core/Block';
 import validateUtils from '../../utils/validate';
 
+
+
 export class ProfileChangePassPage extends Block {
   constructor() {
     super({

@@ -1,4 +1,4 @@
-export { default as Button } from './button';
+export { Button } from './button';
 export { InputField } from './input_field';
 export { Input } from './input';
 export { ErrorLine } from './error_line';

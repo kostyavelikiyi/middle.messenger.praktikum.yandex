@@ -1,10 +1,22 @@
+/* eslint-disable @typescript-eslint/no-confusing-void-expression */
 /* eslint-disable @typescript-eslint/consistent-type-assertions */
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 /* eslint-disable @typescript-eslint/strict-boolean-expressions */
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
 import Block from '../../core/Block';
 
-export class InputField extends Block {
+interface InputProps {
+  onBlur: () => void;
+  classes: string;
+  placeholder: string;
+  name: string;
+  validate?: (value: string) => void;
+  events: {
+    blur: () => void;
+  };
+}
+
+export class InputField extends Block<InputProps> {
   constructor(props: any) {
     super({
       ...props,
