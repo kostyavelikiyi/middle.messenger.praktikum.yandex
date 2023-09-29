@@ -1,6 +1,6 @@
 import Handlebars from 'handlebars';
 import './profile.css';
-export { ProfilePage as default } from './profile';
+export { ProfilePage } from './profile';
 
 Handlebars.registerHelper('profile_main_mock', () => {
   return {

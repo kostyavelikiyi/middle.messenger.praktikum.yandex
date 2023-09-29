@@ -6,10 +6,10 @@
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
 /* eslint-disable @typescript-eslint/consistent-type-imports */
 import Handlebars from 'handlebars';
-import Block from './Block';
+// import Block from './Block';
 import { HelperOptions } from 'handlebars';
 
-export function registerComponent(name: string, Component: typeof Block) {
+export function registerComponent(name: string, Component: any) {
   if (name in Handlebars.helpers) {
     throw `The ${name} component is already registered!`;
   }

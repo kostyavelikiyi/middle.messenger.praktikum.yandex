@@ -10,7 +10,7 @@ import { nanoid } from 'nanoid';
 import Handlebars from 'handlebars';
 
 // Нельзя создавать экземпляр данного класса
-class Block<Props extends Record<string, any> = unknown> {
+class Block<Props extends Record<string, any> = any> {
   [x: string]: any;
   static EVENTS = {
     INIT: 'init',
@@ -59,7 +59,7 @@ class Block<Props extends Record<string, any> = unknown> {
       }
     });
 
-    return { props, children };
+    return { props: props as Props, children };
   }
 
   _removeEvents() {
@@ -173,7 +173,7 @@ class Block<Props extends Record<string, any> = unknown> {
     return this.element;
   }
 
-  _makePropsProxy(props: Props) {
+  _makePropsProxy(props: any) {
     // Ещё один способ передачи this, но он больше не применяется с приходом ES6+
     const self = this;
 

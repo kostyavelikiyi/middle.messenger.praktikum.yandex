@@ -1,6 +1,6 @@
 import Handlebars from 'handlebars';
 import './chat.css';
-export { ChatPage as default } from './chat';
+export { ChatPage } from './chat';
 
 Handlebars.registerHelper('message_preview_mock', () => {
   return [
